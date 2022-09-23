@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+</head>
+<body>
+	<script type="text/javascript">
+		
+        const Faculty = {
+        facultyname:"arjun bala",
+        facultyage:20,
+        facultysubject:"web technology",
+    
+        Printme: function(){
+        console.log("name =",this.facultyname);
+        console.log("age =",this.facultyage);
+        console.log("subject =",this.facultysubject);
+        }
+     };
+        Faculty.facultyage=10;
+        Faculty.Printme();
+
+     /* ans=name = arjun bala
+          age = 10
+          subject = web technology*/
+
+          //this=current object method
+      
+        const Faculty = {
+        facultyname:"arjun bala",
+        facultyage:20,
+        facultysubject:"web technology",
+    
+        Printme: function(){
+        console.log("name =",this.facultyname);
+        console.log("age =",this.facultyage);
+        console.log("subject =",this.facultysubject);      
+        },
+
+        printmany:(n)=>{
+       	for(let i=0;i<n;i++){
+       		console.log("hiii");
+       	}
+       },
+
+   };
+
+   Faculty.Printme();
+   Faculty.printmany(5);
+
+   // ans=name = arjun bala
+        /*age = 2
+        subject = web technology
+        5 time hiii*/
+
+	</script>
+
+</body>
+</html>

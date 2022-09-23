@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+</head>
+<body>
+	<script type="text/javascript">
+		
+    setInterval(printHi,500)
+
+     function printHi(){
+   	 console.log("hiiii");   //output=hiii(1,2,3..)
+     }
+    
+    setInterval(()=>{console.log("hiiii")},500); //output=hiiii;
+
+    let name=prompt ("enter name");
+     setInterval(()=>{printName(name)},500);
+
+     function printName(n){
+     	console.log(n);
+     }
+
+     //output=name;
+     //note: array all elemnets are display to also used on arrow function
+
+	</script>
+
+</body>
+</html>

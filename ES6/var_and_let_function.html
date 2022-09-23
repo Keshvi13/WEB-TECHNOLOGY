@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+</head>
+<body>
+<script type="text/javascript">
+
+   //var used in within a function
+	function vardemo(){
+	        for(var i=1;i<=3;i++){
+			console.log("variable_demo"+i);
+		}
+		console.log("variable");
+	}
+
+
+	function New() {
+		 for(i=1;i<3;i++){
+			console.log("variable_demo"+i);
+		}
+		console.log("variable_demo"+i);
+	}
+
+	vardemo();
+	New();
+
+    //let used in within a block {}
+	function vardemo(){
+	        for(let i=1;i<3;i++){
+			console.log("variable_demo"+i);
+		}
+		console.log("variable_demo"+i);
+	}
+
+
+	function New() {
+		console.log("hello js");
+	}
+	vardemo();
+	New();
+
+</script>
+</body>
+</html>

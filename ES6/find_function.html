@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+</head>
+<body>
+<script type="text/javascript">
+	
+	student=[{city:"rajkot",
+              name:"kishan",
+              spi:8.9},
+
+              {city:"ahmedabad",
+              name:"jeet",
+              spi:8.0},
+
+              {city:"rajkot",
+              name:"raj",
+              spi:9.9}
+
+            ];
+     
+     ans=student.find((stu)=>{if(stu.city=="rajkot")
+                                 return true});
+     console.log(ans);
+      
+
+     // stu.city="ahmedabad"
+
+     /*ans=city: "ahmedabad"
+         name: "jeet"
+         spi: 8*/
+
+    // stu.city="rajkot" rajkot is a 2 times includes in array so frist rajkot elemnet is a display
+
+     /*ans=city: "rajkot"
+        name: "kishan"
+        spi: 8.9 */   
+       
+</script>
+</body>
+</html>
