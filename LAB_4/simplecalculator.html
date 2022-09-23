@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons"rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="simplecalculator.css">
+<body>
+	<div class="p1">
+   <table>
+   	<tr>
+   		<td> enter number 1</td>
+   		<td> : </td>
+   		<td>
+   			<input type="text" id="para1" name="">
+   		</td>
+   	</tr>
+   	<tr>
+   		<td> enter number 2</td>
+   		<td> : </td>
+   		<td>
+   			<input type="text" id="para2" name="">
+   		</td>
+   	</tr>
+
+     </table>
+   </br>
+   <button type="button" span class="material-icons" onclick="sum()">add</button>
+   &nbsp;&nbsp;
+   <button type="button" span class="material-icons" onclick="sub()">remove</button>
+   &nbsp;&nbsp;
+   <button type="button" span class="material-icons" onclick="multi()">close</button>
+   &nbsp;&nbsp;
+   <button type="button" span class="material-icons" onclick="div()">percent</button>
+
+   <h2 id="ans">0</h2>
+</div>
+
+<script type="text/javascript">
+	function sum(){
+		var a =document.getElementById("para1");
+		var b =document.getElementById("para2");
+		var ans =document.getElementById("ans");
+		
+		c = parseInt(para1.value) + parseInt(para2.value);
+
+		ans.innerHTML=c;
+	}
+	function sub(){
+		var a =document.getElementById("para1");
+		var b =document.getElementById("para2");
+		var ans =document.getElementById("ans");
+		
+		c = parseInt(para1.value) - parseInt(para2.value);
+
+		ans.innerHTML=c;
+	}
+	function multi(){
+		var a =document.getElementById("para1");
+		var b =document.getElementById("para2");
+		var ans =document.getElementById("ans");
+		
+		c = parseInt(para1.value) * parseInt(para2.value);
+
+		ans.innerHTML=c;
+	}
+	function div(){
+		var a =document.getElementById("para1");
+		var b =document.getElementById("para2");
+		var ans =document.getElementById("ans");
+		
+		c = parseInt(para1.value) / parseInt(para2.value);
+
+		ans.innerHTML=c;
+	}
+
+</script>
+</body>
+</html>

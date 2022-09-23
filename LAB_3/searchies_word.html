@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+</head>
+<body>
+<script type="text/javascript">
+	s1="darshan university"
+	ans=s1.split(" ");
+
+	search=prompt("enter a word you want to search:");
+	flag=0;
+	for(i=0;i<ans.length;i++){
+		if(ans[i]==search){
+			console.log(i);
+			flag++;
+		}
+	}
+	if(flag==0){
+		console.log("elements not found");
+	}
+</script>
+</body>
+</html>

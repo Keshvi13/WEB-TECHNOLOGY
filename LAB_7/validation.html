@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Validation</title>
+</head>
+<body>
+	<h1 style="text-align: center;">VALIDATION</h1>
+  <div id="error msg"style="color: red; margin-left: 270px;  margin-top: 5px; float: left;">
+  <span></span>
+  </div>
+  <div id="error msg1"style="color: red; margin-top: 10px; float: right;margin-right: 1118px;">
+  <span></span>
+  </div>
+  
+  <table style="position: absolute; height: 20vh; width: 100px; ">
+  	<tr>
+  		<td><b>Name</b></td>
+  		<td>:</td>
+      <span id="error msg"></span>
+  		<td><input type="text" placeholder="Enter Name" name="" id="txtinput"></td>
+  		
+  	</tr>
+  	<tr>
+  		<td><b>Password</b></td>
+  		<td>:</td>
+  		<td><input type="password" placeholder="Enter Password" name="" id="txtpass"></td>
+  	</tr>
+  	<tr>
+      
+  		<td><b>Email</b></td>
+  		<td>:</td>
+  		<td><input type="email" placeholder="Enter Email" name=""></td>
+  	</tr>
+  	<tr>
+  		<td><b>Gender</b></td>
+  		<td>:</td>
+  		<td><input type="radio" name="">male<br>
+  	        <input type="radio" name="">female</td>
+  	</tr>
+  	<tr>
+  		<td><b>Select Course</b></td>
+  		<td>:</td>
+  		<td><select>
+  			<option>data science</option>
+  			<option>big data</option>
+  			<option>mashine lerning</option>
+  			<option>managment</option>
+  			<option>software technology</option>
+  			<option>digital marketing</option>
+  		</select>
+  		</td>
+    </tr>
+    <tr>
+  		<td><b>Address</b></td>
+  		<td>:</td>
+  		<td><textarea cols="6" rows="2" placeholder="Enter Address"></textarea></td>
+  	</tr>
+
+   <td>
+    <button type="submit" value="" onclick="validatedata()"><b>Register</b></button>
+   </td>
+
+  </table>
+      
+</body>
+<script type="text/javascript">
+	function validatedata(){
+      var txt=document.getElementById("txtinput").value;
+      //if(txt.length==0){
+     	//document.getElementById("error msg").innerHTML="please enter name"
+      //}
+      // else{
+      // /document.Write(txt);
+      //}
+	    //}
+
+     //^a = strting with a 
+     //a$ = ending with a
+     //^a$ = start and end both are same a enter only 'a'
+     //a{4}$ = maximum 4 time a
+     //a{4,6}$ = maximum 4 to  minimum 6 
+     //a{4,}$
+     //^a+$ = a to be many time access
+     //a{1,}
+     //^a*$ =blank or center in aaaaaa...
+     //^a.c$ = .means everything number ex:"abc" a and c fix 
+   
+      const pattern_name="^a" ;
+      var regexp_name=new RegExp(pattern_name);
+      if(regexp_name.test(txt)){
+       document.Write(txt); 
+        document.getElementById("error msg").innerHTML="enter name start with 'a'";      
+      }
+      else
+       document.getElementById("error msg").innerHTML="enter name start with 'a'";
+
+      
+      const pattern="a{4}" ;
+      var pass=document.getElementById("txtpass").value;
+      var regexp=new RegExp(pattern);
+      if(regexp.test(pass)){
+        document.Write(pass); 
+         document.getElementById("error msg1").innerHTML="enter incorrect pattern";      
+      }
+      else
+        document.getElementById("error msg1").innerHTML="enter incorrect pattern";
+    }
+
+   
+</script>
+</html>

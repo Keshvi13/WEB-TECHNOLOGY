@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="guicalculator.css">
+	<title></title>
+</head>
+<body background-color ="lightgreen">
+	<h1 align="center" font-color="red">GUI CALCULATOR</ṣh1>
+	  <table class="calculator">
+	  	<tr>
+	  		<td colspan="3"><input class ="display-box" type="text" id="result" disabled/>
+	  		</td>
+	  		<!--clearscreen()function -->
+	  		<td> <input type="button"  value="c" name="" onclick="clearScreen()" id="btn">
+	  		</td>
+        </tr>
+        <tr>
+        	<td><input type="button" value="1" onclick="display('1')"/></td>
+        	<td><input type="button" value="2" onclick="display('2')"/></td>
+        	<td><input type="button" value="3" onclick="display('3')"/></td>
+        	<td><input type="button" value="/" onclick="display('/')"/></td>
+        </tr>
+        <tr>
+        	<td><input type="button" value="4" onclick="display('4')"/></td>
+        	<td><input type="button" value="5" onclick="display('5')"/></td>
+        	<td><input type="button" value="6" onclick="display('6')"/></td>
+        	<td><input type="button" value="-" onclick="display('-')"/></td>
+        </tr>
+        <tr>
+        	<td><input type="button" value="7" onclick="display('7')"/></td>
+        	<td><input type="button" value="8" onclick="display('8')"/></td>
+        	<td><input type="button" value="9" onclick="display('9')"/></td>
+        	<td><input type="button" value="+" onclick="display('+')"/></td>
+        </tr>
+        <tr>
+        	<td><input type="button" value="."  onclick="display('.')"/></td>
+        	<td><input type="button" value="0"  onclick="display('0')"/></td>
+
+
+        	<!--calculate() function evalution-->
+        	<td><input type="button" value="="  onclick="calculate()" id="btn" /></td>
+        	<td><input type="button" value="*"  onclick="display('*')"/></td>
+        </tr>
+    
+	  </table>
+
+	  <script type="text/javascript">
+
+       //function clear all//
+       function clearScreen() {
+       	document.getElementById("result").value="";
+       }
+       
+       //function display values//
+       function display(value) {
+         document.getElementById("result").value += value;
+       }
+
+       //function calculate value evaluates the expression//
+       function calculate() {
+         var p=	document.getElementById("result").value;
+         var q=eval(p);
+         document.getElementById("result").value=q;
+         }
+
+
+
+	  </script>
+
+</body>
+</html>

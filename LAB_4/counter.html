@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons"rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="main.css">
+   
+<body>
+
+<div class="timer">
+   <h1 id="counter">00:00</h1>
+   <button type="button" span class="material-icons" onclick="start()">play_arrow
+   </button>
+
+   <button type="button" span class="material-icons" onclick="stop()">timer
+   </button>
+
+   <button type="button" span class="material-icons" onclick="reset()">restart_alt
+   </button>
+</div>
+   
+<div class="row" id="imgdiv" style="display:none">
+   <img src='C:\Users\ASUS\Pictures\timer.jpg' class="" height="50%" width="10%">
+</div>
+
+<script type="text/javascript">
+      var a=0;
+      var c;
+  
+
+      function start(){
+         c = setInterval(printcounter,10);
+      }
+      
+      function stop(){
+         clearInterval(c); 
+         img = document.getElementById("imgdiv");
+         img.style.display = "block";
+      }
+
+      function reset(){
+         stop();
+         a=0;
+         var temp = document.getElementById("counter");
+         temp.innerHTML="00:00";
+      }
+      function printcounter(){
+         a++;
+         var temp = document.getElementById("counter");
+         temp.innerHTML=a/100;
+         }
+</script>
+
+</body>
+</html>

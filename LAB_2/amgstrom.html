@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+</head>
+<body>
+<script type="text/javascript">
+	n=parseInt(prompt("enter no:"));
+    c=n;
+    arm=0;
+
+    while (n>0){
+	  r=n%10;
+	  arm=arm+(r*r*r);
+	  n=parseInt(n/10);
+     }
+
+      if(c==arm){
+      document.write("armstrong");
+       }
+      else
+       {
+    	document.write("not armstrong ");
+        }
+
+    
+	
+</script>
+</body>
+</html>

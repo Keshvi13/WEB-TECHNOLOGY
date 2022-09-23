@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+</head>
+<body>
+<script type="text/javascript">
+n=parseInt(prompt("enter no of array element"));
+	var a=new Array();
+	for(i=0;i<n;i++){
+		a[i]=prompt("enter no");
+	}	
+	for(i=0;i<a.length;i++){
+		for(j=0;j<i;j++){
+			if(a[i]<a[j]){
+				var x=a[i];
+				a[i]=a[j];
+				a[j]=x;
+			}
+		}
+	}
+      console.log(a);
+</script>
+</body>
+</html>
